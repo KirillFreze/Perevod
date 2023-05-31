@@ -14,13 +14,13 @@ class MainKtTest {
     fun transferMCMarchLimit() {
 
         val result = transfer("Mastercard", 600000, 50000)
-        assertEquals("Месячный лимит ", result)
+        assertEquals("Месячный лимит превышен", result)
     }
     @Test
     fun transferMCCommisionZero() {
 
         val result = transfer("Mastercard", 10000, 40000)
-        assertEquals("Ваша комиссия составит: 400 руб.", result)
+        assertEquals("Ваша комиссия составит: 0 руб.", result)
     }
     @Test
     fun transferMCCommision() {
